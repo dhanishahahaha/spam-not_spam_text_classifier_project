@@ -1,14 +1,16 @@
 import streamlit as st
 import pickle
 import string
+import joblib
 from nltk.corpus import stopwords
 import nltk 
 nltk.download('stopwords')
 nltk.download('punkt')
+
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
-tfidf = pickle.load(open('Vectorizer.pkl','rb'))
-model = pickle.load(open('model.pkl','rb'))
+tfidf = joblib.load(open('Vectorizer.pkl','rb'))
+model = joblib.load(open('model.pkl','rb'))
 
 st.title("Email/SMS spam classifier")
 
