@@ -7,8 +7,8 @@ nltk.download('stopwords')
 nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
-tfidf = pickle.load(open('/content/drive/MyDrive/Vectorizer.pkl','rb'))
-model = pickle.load(open('/content/drive/MyDrive/model.pkl','rb'))
+tfidf = pickle.load(open('Vectorizer.pkl','rb'))
+model = pickle.load(open('model.pkl','rb'))
 
 st.title("Email/SMS spam classifier")
 
